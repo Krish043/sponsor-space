@@ -4,19 +4,19 @@ import Image from "next/image"; // Import the Image component from next/image
 const Username = ({ params }) => {
   return (
     <>
-      <div className="cover w-full relative">
-        <Image
-          className="object-cover w-full h-[350]"
-          src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/4842667/452146dcfeb04f38853368f554aadde1/eyJ3IjoxMjAwLCJ3ZSI6MX0%3D/16.gif?token-time=1722729600&token-hash=zQveauUqcI98L9tF0j3FauGI6WNfKcQT93CAZFZZ1Ec%3D"
-          alt=""
-          layout="fill"
-        />
+      <div className="cover w-full relative h-[350px]">
+  <Image
+    className="object-cover"
+    src="/new.jpg"
+    alt=""
+    layout="fill"
+  />
         <div className="absolute -bottom-10 left-[46%] border-white border-2 rounded-full">
           <Image
             className="rounded-full"
             width={100}
             height={100}
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2UOW09a8y-Ue_FtTFn01C4U4-dZmIax-P_g&s"
+            src="/dp.jpeg"
             alt=""
           />
         </div>
