@@ -7,7 +7,7 @@ const TermsAndConditions = () => {
       
       <p className="text-white mb-4">Welcome to SponsorSpace!</p>
       <p className="text-white mb-6">
-        These terms and conditions outline the rules and regulations for the use of SponsorSpace's website and services.
+        These terms and conditions outline the rules and regulations for the use of SponsorSpace&apos;s website and services.
       </p>
 
       <h2 className="text-2xl font-semibold text-slate-400 mb-4">1. Acceptance of Terms</h2>
@@ -58,7 +58,7 @@ const TermsAndConditions = () => {
         <li>Violating any local, state, national, or international law.</li>
         <li>Impersonating any person or entity or falsely stating your affiliation with a person or entity.</li>
         <li>Transmitting any malicious software or harmful content.</li>
-        <li>Engaging in any activity that disrupts or interferes with the website's operation.</li>
+        <li>Engaging in any activity that disrupts or interferes with the website&apos;s operation.</li>
       </ul>
 
       <h2 className="text-2xl font-semibold text-slate-400 mb-4">9. Termination</h2>
@@ -68,7 +68,7 @@ const TermsAndConditions = () => {
 
       <h2 className="text-2xl font-semibold text-slate-400 mb-4">10. Disclaimer of Warranties</h2>
       <p className="text-white mb-6">
-        SponsorSpace is provided "as is" and "as available." We do not warrant that the website will be uninterrupted, secure, or error-free. We disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement.
+        SponsorSpace is provided &quot;as is&quot; and &quot;as available.&quot; We do not warrant that the website will be uninterrupted, secure, or error-free. We disclaim all warranties, express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement.
       </p>
 
       <h2 className="text-2xl font-semibold text-slate-400 mb-4">11. Limitation of Liability</h2>
