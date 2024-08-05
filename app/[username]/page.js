@@ -1,16 +1,18 @@
 import React from "react";
+import Image from "next/image"; // Import the Image component from next/image
 
 const Username = ({ params }) => {
   return (
     <>
       <div className="cover w-full relative">
-        <img
+        <Image
           className="object-cover w-full h-[350]"
           src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/4842667/452146dcfeb04f38853368f554aadde1/eyJ3IjoxMjAwLCJ3ZSI6MX0%3D/16.gif?token-time=1722729600&token-hash=zQveauUqcI98L9tF0j3FauGI6WNfKcQT93CAZFZZ1Ec%3D"
           alt=""
+          layout="fill"
         />
         <div className="absolute -bottom-10 left-[46%] border-white border-2 rounded-full">
-          <img
+          <Image
             className="rounded-full"
             width={100}
             height={100}
@@ -21,7 +23,7 @@ const Username = ({ params }) => {
       </div>
       <div className="info flex flex-col justify-center items-center my-12">
         <div className="font-bold text-lg">@{params.username}</div>
-        <div className="text-slate-400">Creating Animated art for VTT's</div>
+        <div className="text-slate-400">Creating Animated art for VTT&apos;s</div>
         <div className="text-slate-400">
           12,708 members . 86 posts . $16,870/release
         </div>
@@ -31,39 +33,42 @@ const Username = ({ params }) => {
             <h2 className="text-2xl font-bold my-2">Supporters</h2>
             <ul className="mx-5 text-md">
               <li className="my-2 flex gap-2 items-center">
-                <img
+                <Image
                   width={40}
+                  height={40}
                   className="bg-red-50 rounded-full p-2"
-                  src="avatar.gif"
+                  src="/avatar.gif"
                   alt="user avatar"
                 />
                 <span>
                   Jaivik donated <span className="font-bold">$30</span> with a
-                  message "I support you bro. lots of ❤️"
+                  message &quot;I support you bro. lots of ❤️&quot;
                 </span>
               </li>
               <li className="my-2 flex gap-2 items-center">
-                <img
+                <Image
                   width={40}
+                  height={40}
                   className="bg-red-50 rounded-full p-2"
-                  src="avatar.gif"
+                  src="/avatar.gif"
                   alt="user avatar"
                 />
                 <span>
                   Jaivik donated <span className="font-bold">$30</span> with a
-                  message "I support you bro. lots of ❤️"
+                  message &quot;I support you bro. lots of ❤️&quot;
                 </span>
               </li>
               <li className="my-2 flex gap-2 items-center">
-                <img
+                <Image
                   width={40}
+                  height={40}
                   className="bg-red-50 rounded-full p-2"
-                  src="avatar.gif"
+                  src="/avatar.gif"
                   alt="user avatar"
                 />
                 <span>
                   Jaivik donated <span className="font-bold">$30</span> with a
-                  message "I support you bro. lots of ❤️"
+                  message &quot;I support you bro. lots of ❤️&quot;
                 </span>
               </li>
             </ul>
