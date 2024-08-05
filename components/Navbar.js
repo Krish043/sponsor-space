@@ -1,33 +1,32 @@
 "use client";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const { data: session } = useSession();
-  const [showdropdown, setShowdropdown] = useState(false)
+  const [showdropdown, setShowdropdown] = useState(false);
 
   return (
     <nav className="bg-gray-900 text-white flex justify-between items-center px-4 h-16">
       <div className="logo font-bold flex items-center gap-2">
-      <img className=" text-black" width={48} src="/logo.gif" alt="" />
-        <Link href={"/"}>Sponsor Space</Link></div>
-      {/* <ul className='flex justify-between gap-4'>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Sign up</li>
-            <li>Login</li>
-        </ul> */}
+        <Image className="text-black" width={48} height={48} src="/logo.gif" alt="Logo" />
+        <Link href={"/"}>Sponsor Space</Link>
+      </div>
 
-      <div className="relative"> 
+      <div className="relative">
         {session && (
           <>
             <button
-              onClick={()=>{setShowdropdown(!showdropdown)}}
-              onBlur={()=>{setTimeout(() => {
-                setShowdropdown(false)
-              }, 100);}}
+              onClick={() => {
+                setShowdropdown(!showdropdown);
+              }}
+              onBlur={() => {
+                setTimeout(() => {
+                  setShowdropdown(false);
+                }, 100);
+              }}
               id="dropdownDefaultButton"
               data-dropdown-toggle="dropdown"
               className="text-white mx-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -53,14 +52,15 @@ const Navbar = () => {
 
             <div
               id="dropdown"
-              className={`z-10 ${showdropdown?"":"hidden"} bg-white divide-y absolute left-[175px] divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}>
+              className={`z-10 ${showdropdown ? "" : "hidden"} bg-white divide-y absolute left-[175px] divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
+            >
               <ul
                 className="py-2 text-sm text-gray-700 dark:text-gray-200"
                 aria-labelledby="dropdownDefaultButton"
               >
                 <li>
                   <Link
-                    href='/'
+                    href="/"
                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Dashboard
@@ -76,7 +76,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    onClick={()=>signOut()}
+                    onClick={() => signOut()}
                     href="/"
                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
@@ -100,7 +100,9 @@ const Navbar = () => {
         {session && (
           <Link href={"/login"}>
             <button
-              onClick={()=>{signOut()}}
+              onClick={() => {
+                signOut();
+              }}
               type="button"
               className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
             >
@@ -109,7 +111,6 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-
     </nav>
   );
 };
